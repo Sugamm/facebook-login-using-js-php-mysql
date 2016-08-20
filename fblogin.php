@@ -87,7 +87,7 @@ var getInfo;
       //ajax reqest to server..
 
       var xmlhttp = new XMLHttpRequest();
-      xmlhttp.open("POST", "phpcode/logindata.php", true);
+      xmlhttp.open("POST", "logindata.php", true);
       xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       xmlhttp.onreadystatechange = function(){
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -95,10 +95,7 @@ var getInfo;
         };
       }
       xmlhttp.send(loginData);
-      // console.log('Successful picture Fetching for: ' + response.picture.data.url);
-      // document.getElementById('status').innerHTML =
-      //   'Thanks for logging in, ' + response.name +" "+ response.email +" "+ response.id +" "+ response.picture.data.url +'!';
-    });
+     });
   }
 </script>
 
