@@ -1,3 +1,6 @@
+<!--
+Author : Sugam Malviya
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -94,7 +97,7 @@ var getInfo;
         };
       }
       xmlhttp.send(loginData);
-      document.getElementById('response').innerHTML = loginData;
+      document.getElementById('status').innerHTML = 'Thanks for logging in, ' + response.name +"<br> Email : "+ response.email +"<br> Profile Id :  "+ response.id +"<br> Profile Url : "+ response.picture.data.url +'!';
      });
   }
 </script>
