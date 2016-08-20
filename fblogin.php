@@ -41,7 +41,7 @@ var getInfo;
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '554663474716941',
+    appId      : '{AppID}',
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
@@ -81,7 +81,6 @@ var getInfo;
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me','GET', {fields: 'name,email,id,picture.width(150).height(150)'}, function(response) {
       var loginData = "name="+response.name+"&email="+response.email+"&fb_Id="+response.id+"&profilePictureUrl="+response.picture.data.url;
-      
       console.log('Successful login for: ' + loginData);
       
       //ajax reqest to server..
@@ -95,6 +94,7 @@ var getInfo;
         };
       }
       xmlhttp.send(loginData);
+      document.getElementById('response').innerHTML = loginData;
      });
   }
 </script>
