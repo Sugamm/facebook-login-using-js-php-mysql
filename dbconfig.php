@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "password";
-$database = "informCI";
+$username = "{your-username}";
+$password = "{your-Password}";
+$database = "{database-name}";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password,$database);
